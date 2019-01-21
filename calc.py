@@ -1,0 +1,78 @@
+#!/usr/bin/env python
+#
+# A simple command-line scientific calculator.
+#
+
+import sys, math
+
+
+
+def die_with_usage(message):
+	print("\n****\n**** error: {}\n****\n".format(message), file=sys.stderr)
+	print("usage:\n\n    {} <operator> [arg1 [arg2 [...]]]\n".format(sys.argv[0]), file=sys.stderr)
+	print(", where <operator> can be one of:\n", file=sys.stderr)
+	for (op, func) in operators.items():
+		print("    {}: {}".format(op, func.__doc__), file=sys.stderr)
+	print("", file=sys.stderr)
+	exit(-1)
+
+#
+# The operators.
+#
+# These functions must take the necessary number of arguments, and return
+# the result of the operation. They must have a short docstring explaining
+# what they do (it will be printed by the die_with_usage() function).
+#
+# Exceptions:
+#   - If an incorrect number of arguments is passed, the function must raise a TypeError.
+#   - If there's a problem with argument values (e.g., a negative number passed to log),
+#     the function must raise a ValueError.
+#
+
+def add(*args):
+	"""Add a list of numbers"""
+
+	sum = 0.0
+	for arg in args:
+		sum += arg
+	return sum
+
+def log10(x):
+	"""Return a base-10 logarithm of x"""
+	
+	return math.log10(x)
+
+#
+# The dictionary that maps the command-line name of the operation,
+# to the function that performs it. There can be multiple names
+# for the same operator (e.g., 'add' and 'sum').
+#
+operators = {
+	'add': add,
+	'sum': add,
+	'log10': log10,
+}
+
+if __name__ == "__main__":
+	#
+	# Collect and parse arguments
+	#
+	try:
+		op = sys.argv[1]
+		args = [ float(arg) for arg in sys.argv[2:] ]
+	except IndexError:
+		die_with_usage("Insufficient number of arguments.")
+	except ValueError as e:
+		die_with_usage(e)
+
+	#
+	# Run the requested operation, and print the result
+	#
+	try:
+		print(operators[op](*args))
+	except KeyError:
+		die_with_usage("Unknown operator '{}'.".format(op))
+	except TypeError as e:
+		die_with_usage(e)
+	except ValueError as e:
+		die_with_usage(e)
