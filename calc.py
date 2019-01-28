@@ -4,6 +4,7 @@
 #
 
 import sys, math
+import numpy as np
 
 
 
@@ -41,6 +42,15 @@ def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
 	return math.log10(x)
+
+def fact(x):
+	"""Returns the factorial of x"""
+
+	return math.factorial(x)
+
+	      
+		
+
 
 #
 # The dictionary that maps the command-line name of the operation,
