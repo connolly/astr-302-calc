@@ -4,7 +4,6 @@
 #
 
 import sys, math
-import numpy as np
 
 
 
@@ -61,6 +60,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+	'fact': fact,
 }
 
 if __name__ == "__main__":
