@@ -42,6 +42,19 @@ def log10(x):
 	
 	return math.log10(x)
 
+def div(*args):
+    """
+    Divides a list of numbers sequentially, and returns the resulting quotient.
+    """
+    
+    quotient = arg[0]
+    for arg in args[1:]:
+        if arg==0:
+            raise ZeroDivisionError("Trying to define by ZERO(0). Dividing by ZERO(0) is undefined. Try again without using the number ZERO(0).")
+        quotient /= arg
+    return quotient
+        
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -51,6 +64,8 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+    'div': div,
+    'divide': div,
 }
 
 if __name__ == "__main__":
