@@ -39,8 +39,13 @@ def add(*args):
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
+
+def ln(x):
+	"""Return the base-e logarithm of x"""
+
+	return math.log(x)
 
 #
 # The dictionary that maps the command-line name of the operation,
