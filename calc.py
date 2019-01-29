@@ -44,8 +44,10 @@ def log10(x):
 
 def ln(x):
 	"""Return the base-e logarithm of x"""
-
-	return math.log(x)
+	if x == 0:
+		raise ValueError('The natural logarithm is undefined at x=0')
+	else:
+		return math.log(x)
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -56,6 +58,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+	'ln': ln,
 }
 
 if __name__ == "__main__":
