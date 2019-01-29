@@ -37,6 +37,12 @@ def add(*args):
 		sum += arg
 	return sum
 
+def sub(*args):
+	"""Subtracts a list of numbers from the first number entered"""
+	"""check for length of array"""
+	return args[0] - sum(args[1:])
+		
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
@@ -50,6 +56,9 @@ def log10(x):
 operators = {
 	'add': add,
 	'sum': add,
+	'sub': sub,
+	'subtract': sub,
+	'minus': sub,
 	'log10': log10,
 }
 
