@@ -42,6 +42,11 @@ def log10(x):
 	
 	return math.log10(x)
 
+def fact(x):
+	"""Returns the factorial of x"""
+
+	return math.factorial(x)
+
 def inv(x):
 	"""Return the inverse of x"""
 
@@ -56,7 +61,8 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
-    'inv': inv,
+	'fact': fact,
+  'inv': inv,
 }
 
 if __name__ == "__main__":
