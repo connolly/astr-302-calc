@@ -56,6 +56,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+    'inv': inv,
 }
 
 if __name__ == "__main__":
