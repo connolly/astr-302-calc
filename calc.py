@@ -42,6 +42,11 @@ def log10(x):
 	
 	return math.log10(x)
 
+def inv(x):
+	"""Return the inverse of x"""
+
+	return 1/x
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -51,6 +56,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+    'inv': inv,
 }
 
 if __name__ == "__main__":
