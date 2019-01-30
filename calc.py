@@ -47,9 +47,10 @@ def fact(x):
 
 	return math.factorial(x)
 
-	      
-		
+def inv(x):
+	"""Return the inverse of x"""
 
+	return 1/x
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -61,6 +62,7 @@ operators = {
 	'sum': add,
 	'log10': log10,
 	'fact': fact,
+  'inv': inv,
 }
 
 if __name__ == "__main__":
