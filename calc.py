@@ -44,7 +44,6 @@ def log10(x):
 
 def exp(x):
 	"""Return e raised to the power x"""
-	
 	return math.exp(x)
 
 #
