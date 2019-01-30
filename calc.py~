@@ -31,6 +31,7 @@ def die_with_usage(message):
 
 def add(*args):
 	"""Add a list of numbers"""
+
 	sum = 0.0
 	for arg in args:
 		sum += arg
