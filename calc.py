@@ -43,9 +43,8 @@ def log10(x):
 
 def div(*args):
     """
-    Divides a list of numbers sequentially, and returns the resulting quotient.
-    """
-    
+    Divide a list of numbers sequentially, and return the resulting quotient.
+    """    
     quotient = arg[0]
     for arg in args[1:]:
         if arg==0:
