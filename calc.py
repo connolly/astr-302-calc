@@ -48,7 +48,6 @@ def ln(x):
 		raise ValueError('The natural logarithm is undefined at x=0')
 	else:
 		return math.log(x)
-
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
