@@ -42,6 +42,10 @@ def log10(x):
 	
 	return math.log10(x)
 
+def exp(x):
+	"""Return e raised to the power x"""
+	return math.exp(x)
+
 def fact(x):
 	"""Returns the factorial of x"""
 
@@ -52,6 +56,7 @@ def inv(x):
 
 	return 1/x
 
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -61,6 +66,8 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+	'exp': exp,
+	'exponential': exp,
 	'fact': fact,
   'inv': inv,
 }
