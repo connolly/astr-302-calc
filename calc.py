@@ -48,6 +48,21 @@ def ln(x):
 		raise ValueError('The natural logarithm is undefined at x=0')
 	else:
 		return math.log(x)
+
+def exp(x):
+	"""Return e raised to the power x"""
+	return math.exp(x)
+
+def fact(x):
+	"""Returns the factorial of x"""
+
+	return math.factorial(x)
+
+def inv(x):
+	"""Return the inverse of x"""
+
+	return 1/x
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -58,6 +73,10 @@ operators = {
 	'sum': add,
 	'log10': log10,
 	'ln': ln,
+	'exp': exp,
+	'exponential': exp,
+	'fact': fact,
+  'inv': inv,
 }
 
 if __name__ == "__main__":
