@@ -38,9 +38,16 @@ def add(*args):
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
 
+def ln(x):
+	"""Return the base-e logarithm of x"""
+	if x == 0:
+		raise ValueError('The natural logarithm is undefined at x=0')
+	else:
+		return math.log(x)
+  
 def div(*args):
     """
     Divide a list of numbers sequentially, and return the resulting quotient.
@@ -51,7 +58,6 @@ def div(*args):
             raise ZeroDivisionError("Trying to define by ZERO(0). Dividing by ZERO(0) is undefined. Try again without using the number ZERO(0).")
         quotient /= arg
     return quotient
-        
 
 def exp(x):
 	"""Return e raised to the power x"""
@@ -59,14 +65,11 @@ def exp(x):
 
 def fact(x):
 	"""Returns the factorial of x"""
-
-	return math.factorial(x)
+  return math.factorial(x)
 
 def inv(x):
 	"""Return the inverse of x"""
-
 	return 1/x
-
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -77,6 +80,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+	'ln': ln,
   'div': div,
   'divide': div,
 	'exp': exp,
