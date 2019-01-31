@@ -43,8 +43,9 @@ def log10(x):
 
 def div(*args):
     """
-    Divide a list of numbers sequentially, and return the resulting quotient.
-    """    
+    Divides a list of numbers sequentially, and returns the resulting quotient.
+    """
+    
     quotient = arg[0]
     for arg in args[1:]:
         if arg==0:
@@ -52,21 +53,6 @@ def div(*args):
         quotient /= arg
     return quotient
         
-
-def exp(x):
-	"""Return e raised to the power x"""
-	return math.exp(x)
-
-def fact(x):
-	"""Returns the factorial of x"""
-
-	return math.factorial(x)
-
-def inv(x):
-	"""Return the inverse of x"""
-
-	return 1/x
-
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -77,12 +63,8 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
-  'div': div,
-  'divide': div,
-	'exp': exp,
-	'exponential': exp,
-	'fact': fact,
-  'inv': inv,
+    'div': div,
+    'divide': div,
 }
 
 if __name__ == "__main__":
