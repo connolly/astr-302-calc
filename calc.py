@@ -47,6 +47,11 @@ def log10(x):
 
 	return math.log10(x)
 
+def sqrt(*args):
+	"""find the square root of a number, a^0.5"""
+	value = (args[0]) ** (0.5)
+	return value
+
 def ln(x):
 	"""Return the base-e logarithm of x"""
 	if x == 0:
@@ -89,6 +94,7 @@ operators = {
 	'subtract': sub,
 	'minus': sub,
 	'log10': log10,
+	'sqrt' : sqrt,
 	'ln': ln,
   'div': div,
   'divide': div,
