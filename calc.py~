@@ -36,51 +36,23 @@ def add(*args):
 		sum += arg
 	return sum
 
-def sub(*args):
-	"""Subtracts a list of numbers from the first number entered"""
-	"""check for length of array"""
-	return args[0] - sum(args[1:])
-		
-
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-
+	
 	return math.log10(x)
 
-def sqrt(*args):
-	"""find the square root of a number, a^0.5"""
-	value = (args[0]) ** (0.5)
-	return value
-
-def ln(x):
-	"""Return the base-e logarithm of x"""
-	if x == 0:
-		raise ValueError('The natural logarithm is undefined at x=0')
-	else:
-		return math.log(x)
-  
 def div(*args):
     """
-    Divide a list of numbers sequentially, and return the resulting quotient.
-    """    
+    Divides a list of numbers sequentially, and returns the resulting quotient.
+    """
+    
     quotient = arg[0]
     for arg in args[1:]:
         if arg==0:
             raise ZeroDivisionError("Trying to define by ZERO(0). Dividing by ZERO(0) is undefined. Try again without using the number ZERO(0).")
         quotient /= arg
     return quotient
-
-def exp(x):
-	"""Return e raised to the power x"""
-	return math.exp(x)
-
-def fact(x):
-	"""Returns the factorial of x"""
-  return math.factorial(x)
-
-def inv(x):
-	"""Return the inverse of x"""
-	return 1/x
+        
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -90,18 +62,9 @@ def inv(x):
 operators = {
 	'add': add,
 	'sum': add,
-	'sub': sub,
-	'subtract': sub,
-	'minus': sub,
 	'log10': log10,
-	'sqrt' : sqrt,
-	'ln': ln,
-  'div': div,
-  'divide': div,
-	'exp': exp,
-	'exponential': exp,
-	'fact': fact,
-  'inv': inv,
+    'div': div,
+    'divide': div,
 }
 
 if __name__ == "__main__":
